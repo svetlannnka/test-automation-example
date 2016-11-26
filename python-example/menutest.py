@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
@@ -30,7 +31,7 @@ def test_menu(driver):
 
         while sub_item_count > 0:
             driver.find_element_by_css_selector("li#app-.selected li:nth-of-type(%d)" % sub_item_count).click()
-            WebDriverWait(driver, 5).until(EC.title_contains("My Store"))
+            WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.CSS_SELECTOR,"h1")))
             sub_item_count -= 1
 
         item_count -= 1
