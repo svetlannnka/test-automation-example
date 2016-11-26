@@ -20,5 +20,5 @@ def test_only_one_sticker(driver):
 
         if len(sticker) != 1:
             print product.get_attribute('innerHTML')
-            raise StandardError("Ha! Too many stickers for element %s!" % product.id)
-
+            raise StandardError(" Ha! Wrong amount of stickers for element found! Should be 1 instead of %s. "
+                                "Element-id: %s" % (len(sticker), product.id))

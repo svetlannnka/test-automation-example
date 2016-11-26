@@ -25,13 +25,14 @@ def test_menu(driver):
 
     while item_count > 0:
         driver.find_element_by_css_selector("li#app-:nth-of-type(%d)" % item_count).click()
+        WebDriverWait(driver, 3).until(EC.visibility_of_element_located((By.CSS_SELECTOR, "h1")))
         # sleep(1)
         sub_menu_items = driver.find_elements_by_css_selector("li#app-.selected li")
         sub_item_count = len(sub_menu_items)
 
         while sub_item_count > 0:
             driver.find_element_by_css_selector("li#app-.selected li:nth-of-type(%d)" % sub_item_count).click()
-            WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.CSS_SELECTOR,"h1")))
+            WebDriverWait(driver, 3).until(EC.visibility_of_element_located((By.CSS_SELECTOR,"h1")))
             sub_item_count -= 1
 
         item_count -= 1
