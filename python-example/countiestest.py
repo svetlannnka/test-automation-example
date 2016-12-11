@@ -61,7 +61,7 @@ def test_zones_for_countries(driver):
         zones_list_sorted = sorted(zones_list)
 
         if zones_list_sorted != zones_list:
-            raise StandardError("Countries not sorted alphabetically. "
+            raise StandardError("Zones not sorted alphabetically. "
                                 "List should be: ", zones_list_sorted,
                                 "instead of ", zones_list, ".")
 
@@ -92,7 +92,7 @@ def test_zones_page(driver):
         zones_list_sorted = sorted(zones_list)
 
         if zones_list_sorted != zones_list:
-            raise StandardError("Countries not sorted alphabetically. "
+            raise StandardError("Zones not sorted alphabetically. "
                                 "List should be: ", zones_list_sorted,
                                 "instead of ", zones_list, ".")
 
