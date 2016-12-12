@@ -26,7 +26,7 @@ def checkbox_select(cb):
     if not cb.is_selected():
         cb.click()
 
-# Test product name and price
+
 def test_next_product(driver):
     driver.implicitly_wait(2)
     login(driver)
@@ -75,8 +75,12 @@ def test_next_product(driver):
     driver.find_element_by_name("prices[USD]").send_keys(new_price)
     driver.find_element_by_name("save").click()  # Saving
 
-    # Making sure the product got created
+    # Making sure the product got created is Admin Catalog
+    driver.get("http://localhost/litecart/admin/?app=catalog&doc=catalog")
+    driver.find_element_by_xpath("//table[@class = 'dataTable']//a[text()='%s']" % pr_name)  # searching for new pr Name
+
+    # Making sure the product got created in Store
     driver.get("http://localhost/litecart/en/")
-    # Searching among Latest Products, comparing Name and Price of the product
+    # Searching among Latest Products, looking for Name and Price of the new product
     driver.find_element_by_xpath("//div[@id='box-latest-products']//a[.//div"
         "[@class='name' and text()= '%s'] and .//span[@class='price' and text() = '$%s']]" % (pr_name, new_price))
