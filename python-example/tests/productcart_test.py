@@ -1,15 +1,4 @@
-import pytest
-from selenium import webdriver
-from app.application import Application
-
-
-@pytest.fixture
-def app(request):
-    app = Application()
-    request.addfinalizer(app.quit)
-    return app
-
-
+# Test to add product(s) to cart
 def test_cart(app):
     test_products = 2
 
