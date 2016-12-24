@@ -43,7 +43,7 @@ def test_zones_for_countries(driver):
     driver.implicitly_wait(2)
     driver.get("http://localhost/litecart/admin/?app=countries&doc=countries")
 
-    # searching for countries with zone pages td[6]>0
+    # searching for countries with zone page td[6]>0
     zone_pages = driver.find_elements_by_xpath("//form[@name = 'countries_form']//tr[@class ='row' and ./td[6]>0]//a[text()!=0]")
     page_count = len(zone_pages)
 

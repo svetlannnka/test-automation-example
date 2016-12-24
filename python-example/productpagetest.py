@@ -32,7 +32,7 @@ def test_product(driver):
     assert camp_price == camp_price_pr
 
 
-# Test CSS on 2 diff pages
+# Test CSS on 2 diff page
 def test_styles(driver):
     driver.implicitly_wait(2)
     driver.get("http://localhost/litecart/en/")
