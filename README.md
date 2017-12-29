@@ -8,7 +8,7 @@ commands and their usage.
 
 Application Under Test is [LiteCart E-commerce Platform](https://www.litecart.net/download)
 
-##### Subjects covered in this project:
+#### Subjects covered in this project:
 - locating elements
 - navigation and interaction with elements
 - working with alerts, frames, WebDriver window handle
@@ -17,16 +17,16 @@ Application Under Test is [LiteCart E-commerce Platform](https://www.litecart.ne
 - most common webDriver Exceptions
 - PageObjects
 
-#### How to run:
+### How to:
 
 **Installation.**
 Running tests locally requires you to have browser drivers installed on your machine.
 For more details, check out [Selenuim and Python: drivers and installation](https://pypi.python.org/pypi/selenium).
 
-For test execution you need to have Application Under Test installed locally, it can be downloaded here: [LiteCart E-commerce Platform](https://www.litecart.net/download)
+For test execution you need to have AUT installed locally, it can be downloaded here: [LiteCart E-commerce Platform](https://www.litecart.net/download).
 If you do not have local server, you can use a free solution from [MAMP](https://www.mamp.info/en/).
 
-**To run the tests** - run any *test.py file. Each file contains full steps for each actomates test scenario.
+**To run the tests** - run any *test.py file. Each file contains full steps for each automated test scenario.
 
 To check out **PageObject implementation**, run _tests/productcart_test.py_.
 It will initialize app class (_application.py_) that contains references to page classes.
@@ -41,7 +41,7 @@ It will initialize app class (_application.py_) that contains references to page
 
 
 
-#### Useful links:
+### Useful links:
 - [Selenuim and Python: drivers and installation](https://pypi.python.org/pypi/selenium)
 - [Selenium and Python: how to, main classes and methods](http://selenium-python.readthedocs.io/installation.html)
 - [Python 3, Anaconda Download](https://www.continuum.io/downloads)
@@ -50,4 +50,4 @@ It will initialize app class (_application.py_) that contains references to page
 
 
 
-#### Happy testing!
+### Happy testing!
